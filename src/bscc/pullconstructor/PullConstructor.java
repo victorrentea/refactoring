@@ -1,4 +1,4 @@
-package pullconstructor;
+package bscc.pullconstructor;
 
 public class PullConstructor {
 

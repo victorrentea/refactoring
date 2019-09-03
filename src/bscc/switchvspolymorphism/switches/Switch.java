@@ -1,4 +1,4 @@
-package switchvspolymorphism.switches;
+package bscc.switchvspolymorphism.switches;
 
 public class Switch {
 }
