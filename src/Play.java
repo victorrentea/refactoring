@@ -8,7 +8,9 @@ public class Play {
         System.out.println("Heavy logic using params: " + a + b + c + d);
     }
 
-    // TODO enlarge extraction; early return (guards); distill switches
+    // TODO enlarge extraction
+    // TODO early return (guards)
+    // TODO distill switches
     public int computeCost(DayOfWeek day, boolean isPremiere) {
         int baseCost = 0;
         if (day != null) {
@@ -27,13 +29,23 @@ public class Play {
         return baseCost * 2;
     }
 
-    public void buyCoupleTicket() { // extract var, extract met, inline var
+    // TODO extract var+met then inline var
+    public void buyCoupleTicket() {
         System.out.println("Allocate ticket 1");
         System.out.println("Allocate ticket 2");
         System.out.println("More logic here");
         // TODO implement buy group ticket
     }
 
-
+    // TODO encapsulate conditionals
+    // TODO 'feature envy' smell
+    public void cancelOrder(Order order) {
+        if (order.getStatus() == Order.Status.NEW &&
+                order.getOrderLines().stream().noneMatch(OrderLine::isSpecialOffer)) {
+            System.out.println("Logic to cancel order");
+        } else {
+            throw new IllegalArgumentException("Order cannot be cancelled!");
+        }
+    }
 
 }
