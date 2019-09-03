@@ -62,10 +62,14 @@ public class Play {
         return start1 <= end2 && start2 <= end1;
     }
 
-    // TODO wrap call
-    public int humongousMethod(String b) {
-        System.out.println("Huge complex code");
-        if (b == null) {
+    // TODO avoid boolean params
+    // TODO wrap call when b=false
+    public int humongousMethod(String a, boolean boulean) {
+        System.out.println("Huge complex code with " + a);
+        if (boulean) {
+            System.out.println("More optional logic");
+        }
+        if (Integer.parseInt(a) == 1) {
             return 1;
         }
         System.out.println("With different return points");
@@ -104,18 +108,17 @@ public class Play {
 
     // TODO introduce Strategy Design Pattern
     private int calculateComission(String userCountry, int basePrice) {
-        switch (userCountry) {
-            case "US":
-                System.out.println("Big Ugly Logic (50 lines)");
-                return basePrice * 2 + 1;
-            case "CN":
-                System.out.println("More logic");
-                return basePrice * 5 + 2;
-            case "UK":
-                System.out.println("Taxes, taxes");
-                return basePrice + 10;
-            default: throw new IllegalArgumentException(userCountry);
+        if ("US".equals(userCountry)) {
+            System.out.println("Big Ugly Logic (50 lines)");
+            return basePrice * 2 + 1;
+        } else if ("CN".equals(userCountry)) {
+            System.out.println("More logic");
+            return basePrice * 5 + 2;
+        } else if ("UK".equals(userCountry)) {
+            System.out.println("Taxes, taxes");
+            return basePrice + 10;
         }
+        throw new IllegalArgumentException(userCountry);
 
     }
 
