@@ -1,6 +1,8 @@
 import java.time.DayOfWeek;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Play {
     public void reorderParams() {
@@ -25,7 +27,7 @@ public class Play {
         } else {
             throw new IllegalArgumentException("No day provided!");
         }
-        System.out.println("More logic computing final cost");
+        System.out.println("More logic computing final cost using " + isPremiere);
         return baseCost * 2;
     }
 
@@ -50,7 +52,7 @@ public class Play {
 
     // TODO Extract to MathUtil
     // TODO Create Value Object
-    public List<CarModel> searchCar(CarSearchCriteria criteria, List<CarModel> models) {
+    public List<CarModel> filterCarModels(CarSearchCriteria criteria, List<CarModel> models) {
         List<CarModel> results = new ArrayList<>(models);
         results.removeIf(model -> ! intersects(
                 model.getStartYear(), model.getEndYear(),
@@ -72,5 +74,19 @@ public class Play {
         System.out.println("With different return points");
         return 0;
     }
+
+    // TODO Extract method object
+    public void search(String name) {
+        Map<String, Object> params = new HashMap<>();
+        String query = "SELECT e FROM Person e WHERE 1 = 1 ";
+
+        if (name != null) {
+            query += " AND e.name = :name";
+            params.put("name", name);
+        } // + 20 similar
+
+        System.out.println("Launch the query: " + query + " with params: " + params);
+    }
+
 
 }
