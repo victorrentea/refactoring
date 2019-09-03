@@ -1,8 +1,5 @@
 import java.time.DayOfWeek;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Play {
     public void reorderParams() {
@@ -86,6 +83,19 @@ public class Play {
         } // + 20 similar
 
         System.out.println("Launch the query: " + query + " with params: " + params);
+    }
+
+    // TODO extract pure (mind the side effects)
+    public List<UserDto> getAllUsers() {
+        List<User> allUsers = getFromRepository();
+        List<UserDto> userDtos = new ArrayList<>();
+        for (User user : allUsers) {
+            userDtos.add(new UserDto(user));
+        }
+        return userDtos;
+    }
+    private List<User> getFromRepository() {
+        return Arrays.asList(new User()); // dummy
     }
 
 
