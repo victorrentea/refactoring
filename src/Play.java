@@ -90,12 +90,15 @@ public class Play {
         List<User> allUsers = getFromRepository();
         List<UserDto> userDtos = new ArrayList<>();
         for (User user : allUsers) {
-            userDtos.add(new UserDto(user));
+            UserDto dto = new UserDto();
+            dto.name = user.getName().toUpperCase();
+            dto.email = user.getEmail();
+            userDtos.add(dto);
         }
         return userDtos;
     }
     private List<User> getFromRepository() {
-        return Arrays.asList(new User()); // dummy
+        return Arrays.asList(new User()); // fake
     }
 
 

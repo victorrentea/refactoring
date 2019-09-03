@@ -1,5 +1,4 @@
 public class UserDto {
-    public UserDto(User user) {
-
-    }
+    public String name;
+    public String email;
 }
