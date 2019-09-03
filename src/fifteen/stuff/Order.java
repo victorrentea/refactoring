@@ -1,8 +1,10 @@
+package fifteen.stuff;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
-    enum Status {
+    public enum Status {
         NEW, IN_PROCESS, SHIPPED, DELIVERED
     }
     private Status status;

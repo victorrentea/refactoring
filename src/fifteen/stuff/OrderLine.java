@@ -1,3 +1,5 @@
+package fifteen.stuff;
+
 public class OrderLine {
     private final boolean specialOffer;
 

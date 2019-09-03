@@ -1,3 +1,7 @@
+package fifteen;
+
+import fifteen.stuff.*;
+
 import java.time.DayOfWeek;
 import java.util.*;
 
@@ -43,11 +47,11 @@ public class Play {
                 order.getOrderLines().stream().noneMatch(OrderLine::isSpecialOffer)) {
             System.out.println("Logic to cancel order");
         } else {
-            throw new IllegalArgumentException("Order cannot be cancelled!");
+            throw new IllegalArgumentException("fifteen.stuff.Order cannot be cancelled!");
         }
     }
 
-    // TODO Extract to MathUtil
+    // TODO Extract to fifteen.stuff.MathUtil
     // TODO Create Value Object
     public List<CarModel> filterCarModels(CarSearchCriteria criteria, List<CarModel> models) {
         List<CarModel> results = new ArrayList<>(models);
@@ -62,22 +66,8 @@ public class Play {
         return start1 <= end2 && start2 <= end1;
     }
 
-    // TODO avoid boolean params
-    // TODO wrap call when b=false
-    public int humongousMethod(String a, boolean boulean) {
-        System.out.println("Huge complex code A with " + a);
-        if (boulean) {
-            System.out.println("More optional logic");
-        }
-        if (Integer.parseInt(a) == 1) {
-            System.out.println("With different return points");
-            return 1;
-        }
-        System.out.println("Yet more code");
-        return 0;
-    }
-
     // TODO Extract method object
+
     public void search(String name) {
         Map<String, Object> params = new HashMap<>();
         String query = "SELECT e FROM Person e WHERE 1 = 1 ";
@@ -89,8 +79,8 @@ public class Play {
 
         System.out.println("Launch the query: " + query + " with params: " + params);
     }
-
     // TODO extract pure (mind the side effects)
+
     public List<UserDto> getAllUsers() {
         List<User> allUsers = getFromRepository();
         List<UserDto> userDtos = new ArrayList<>();
@@ -105,7 +95,6 @@ public class Play {
     private List<User> getFromRepository() {
         return Arrays.asList(new User()); // fake
     }
-
 
     // TODO introduce Strategy Design Pattern
     private int calculateComission(String userCountry, int basePrice) {
@@ -124,4 +113,19 @@ public class Play {
     }
 
 
+    // TODO avoid boolean params
+    // TODO wrap call when b=false
+    // TODO extract'n'test + mock away
+    public int humongousMethod(String a, boolean boulean) {
+        System.out.println("Huge complex code A with " + a);
+        if (boulean) {
+            System.out.println("More optional logic");
+        }
+        if (Integer.parseInt(a) == 1) {
+            System.out.println("With different return points");
+            return 1;
+        }
+        System.out.println("Yet more code");
+        return 0;
+    }
 }
