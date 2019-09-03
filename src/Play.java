@@ -65,14 +65,15 @@ public class Play {
     // TODO avoid boolean params
     // TODO wrap call when b=false
     public int humongousMethod(String a, boolean boulean) {
-        System.out.println("Huge complex code with " + a);
+        System.out.println("Huge complex code A with " + a);
         if (boulean) {
             System.out.println("More optional logic");
         }
         if (Integer.parseInt(a) == 1) {
+            System.out.println("With different return points");
             return 1;
         }
-        System.out.println("With different return points");
+        System.out.println("Yet more code");
         return 0;
     }
 
