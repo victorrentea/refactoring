@@ -8,25 +8,32 @@ public class Play {
         System.out.println("Heavy logic using params: " + a + b + c + d);
     }
 
+    // TODO enlarge extraction; early return (guards); distill switches
     public int computeCost(DayOfWeek day, boolean isPremiere) {
         int baseCost = 0;
-        switch (day) {
-            case SATURDAY:
-            case SUNDAY: baseCost = 6; break;
-            case FRIDAY: baseCost = 4; break;
-            case TUESDAY:
-            case THURSDAY:
-            case MONDAY: baseCost = 3; break;
+        if (day != null) {
+            switch (day) {
+                case SATURDAY:
+                case SUNDAY: baseCost = 6; break;
+                case FRIDAY: baseCost = 4; break;
+                case TUESDAY:
+                case THURSDAY:
+                case MONDAY: baseCost = 3; break;
+            }
+        } else {
+            throw new IllegalArgumentException("No day provided!");
         }
         System.out.println("More logic computing final cost");
         return baseCost * 2;
     }
 
-    public void buyCoupleTicket() {
+    public void buyCoupleTicket() { // extract var, extract met, inline var
         System.out.println("Allocate ticket 1");
         System.out.println("Allocate ticket 2");
         System.out.println("More logic here");
         // TODO implement buy group ticket
     }
+
+
 
 }
