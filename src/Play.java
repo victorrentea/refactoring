@@ -1,6 +1,8 @@
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Play {
     public void reorderParams() {
@@ -46,6 +48,21 @@ public class Play {
         } else {
             throw new IllegalArgumentException("Order cannot be cancelled!");
         }
+    }
+
+    // TODO Extract to MathUtil
+    // TODO Create Value Object
+    public List<CarModel> searchCar(CarSearchCriteria criteria, List<CarModel> models) {
+        List<CarModel> results = new ArrayList<>(models);
+        results.removeIf(model -> ! intersects(
+                model.getStartYear(), model.getEndYear(),
+                criteria.getStartYear(), criteria.getEndYear()));
+        System.out.println("More filtering logic");
+        return results;
+    }
+    // http://world.std.com/~swmcd/steven/tech/interval.html
+    private boolean intersects(int start1, int end1, int start2, int end2) {
+        return start1 <= end2 && start2 <= end1;
     }
 
 }
