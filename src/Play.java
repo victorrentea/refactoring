@@ -102,7 +102,8 @@ public class Play {
     }
 
 
-    private int computeComission(String userCountry, int basePrice) {
+    // TODO introduce Strategy Design Pattern
+    private int calculateComission(String userCountry, int basePrice) {
         switch (userCountry) {
             case "US":
                 System.out.println("Big Ugly Logic (50 lines)");
