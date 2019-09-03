@@ -1,6 +1,4 @@
 import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -63,6 +61,16 @@ public class Play {
     // http://world.std.com/~swmcd/steven/tech/interval.html
     private boolean intersects(int start1, int end1, int start2, int end2) {
         return start1 <= end2 && start2 <= end1;
+    }
+
+    // TODO wrap call
+    public int humongousMethod(String b) {
+        System.out.println("Huge complex code");
+        if (b == null) {
+            return 1;
+        }
+        System.out.println("With different return points");
+        return 0;
     }
 
 }
