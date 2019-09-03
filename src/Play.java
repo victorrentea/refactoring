@@ -23,21 +23,10 @@ public class Play {
     }
 
     public void buyCoupleTicket() {
-        System.out.println("Buy ticket 1");
-        System.out.println("Buy ticket 2");
+        System.out.println("Allocate ticket 1");
+        System.out.println("Allocate ticket 2");
         System.out.println("More logic here");
+        // TODO implement buy group ticket
     }
 
-    public void enlargeExtraction(String fromDateStr, String toDateStr) {
-        DayOfWeek.valueOf("a");
-        LocalDate fromDate = LocalDate.parse(fromDateStr, DateTimeFormatter.ISO_DATE);
-        LocalDate toDate = LocalDate.parse(toDateStr, DateTimeFormatter.ISO_DATE);
-
-        System.out.println("Further logic using " + fromDate + " and " + toDate);
-    }
-
-
-    public static void main(String[] args) {
-        new Play().enlargeExtraction("2019-01-0a1", "2020-01-01");
-    }
 }
