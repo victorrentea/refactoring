@@ -10,7 +10,7 @@ public class Play {
     // TODO enlarge extraction
     // TODO early return (guards)
     // TODO distill switches
-    public int computeCost(DayOfWeek day, boolean isPremiere) {
+    public int computePrice(DayOfWeek day, boolean isPremiere) {
         int baseCost = 0;
         if (day != null) {
             switch (day) {
@@ -99,6 +99,23 @@ public class Play {
     }
     private List<User> getFromRepository() {
         return Arrays.asList(new User()); // fake
+    }
+
+
+    private int computeComission(String userCountry, int basePrice) {
+        switch (userCountry) {
+            case "US":
+                System.out.println("Big Ugly Logic (50 lines)");
+                return basePrice * 2 + 1;
+            case "CN":
+                System.out.println("More logic");
+                return basePrice * 5 + 2;
+            case "UK":
+                System.out.println("Taxes, taxes");
+                return basePrice + 10;
+            default: throw new IllegalArgumentException(userCountry);
+        }
+
     }
 
 
