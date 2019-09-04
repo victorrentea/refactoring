@@ -44,7 +44,8 @@ public class Play {
     // TODO 'feature envy' smell
     public void cancelOrder(Order order) {
         if (order.getStatus() == Order.Status.NEW &&
-                order.getOrderLines().stream().noneMatch(OrderLine::isSpecialOffer)) {
+                order.getOrderLines().stream().noneMatch(OrderLine::isSpecialOffer)
+            || order.getStatus() == Order.Status.PAYMENT_FAILED) {
             System.out.println("Logic to cancel order");
         } else {
             throw new IllegalArgumentException("fifteen.stuff.Order cannot be cancelled!");

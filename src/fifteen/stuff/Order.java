@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Order {
     public enum Status {
-        NEW, IN_PROCESS, SHIPPED, DELIVERED
+        NEW, IN_PROCESS, SHIPPED, DELIVERED, PAYMENT_FAILED
     }
     private Status status;
     private List<OrderLine> orderLines = new ArrayList<>();
