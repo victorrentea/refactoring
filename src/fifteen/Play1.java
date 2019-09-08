@@ -5,7 +5,7 @@ import fifteen.stuff.*;
 import java.time.DayOfWeek;
 import java.util.*;
 
-public class Play {
+public class Play1 {
     public void reorderParams() {
         String d = "D", a = "A", b = "B", c = "C";
         System.out.println("Heavy logic using params: " + a + b + c + d);
@@ -94,38 +94,5 @@ public class Play {
     }
     private List<User> getFromRepository() {
         return Arrays.asList(new User()); // fake ;)
-    }
-
-    // TODO introduce Strategy Design Pattern
-    private int calculateComission(String userCountry, int basePrice) {
-        if ("US".equals(userCountry)) {
-            System.out.println("Big Ugly Logic (50 lines)");
-            return basePrice * 2 + 1;
-        } else if ("CN".equals(userCountry)) {
-            System.out.println("More logic");
-            return basePrice * 5 + 2;
-        } else if ("UK".equals(userCountry)) {
-            System.out.println("Taxes, taxes");
-            return basePrice + 10;
-        }
-        throw new IllegalArgumentException(userCountry);
-
-    }
-
-
-    // TODO avoid boolean params
-    // TODO wrap call when b=false
-    // TODO extract'n'test + mock away
-    public int humongousMethod(String a, boolean boulean) {
-        System.out.println("Huge complex code A with " + a);
-        if (boulean) {
-            System.out.println("More optional logic");
-        }
-        if (Integer.parseInt(a) == 1) {
-            System.out.println("With different return points");
-            return 1;
-        }
-        System.out.println("Yet more code");
-        return 0;
     }
 }
