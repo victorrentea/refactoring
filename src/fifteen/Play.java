@@ -68,7 +68,6 @@ public class Play {
     }
 
     // TODO Extract method object
-
     public void search(String name) {
         Map<String, Object> params = new HashMap<>();
         String query = "SELECT e FROM Person e WHERE 1 = 1 ";
@@ -78,7 +77,7 @@ public class Play {
             params.put("name", name);
         } // + 20 similar
 
-        System.out.println("Launch the query: " + query + " with params: " + params);
+        System.out.println("Build and run the query: " + query + " with params: " + params);
     }
     // TODO extract pure (mind the side effects)
 
