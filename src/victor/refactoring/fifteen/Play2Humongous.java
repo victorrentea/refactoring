@@ -2,8 +2,8 @@ package victor.refactoring.fifteen;
 
 public class Play2Humongous {
 
+    // TODO do yet one more thing before and after, every time. Z
     // TODO avoid boolean params
-    // TODO wrap call when b=false
     // TODO extract'n'test + mock away
     public int humongousMethod(String a, boolean boulean) {
         System.out.println("Huge complex code A with " + a);
