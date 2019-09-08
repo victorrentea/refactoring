@@ -1,6 +1,6 @@
-package fifteen;
+package victor.refactoring.fifteen;
 
-import fifteen.stuff.*;
+import victor.refactoring.fifteen.stuff.*;
 
 import java.time.DayOfWeek;
 import java.util.*;

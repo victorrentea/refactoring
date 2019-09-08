@@ -1,9 +1,4 @@
-package fifteen;
-
-import fifteen.stuff.*;
-
-import java.time.DayOfWeek;
-import java.util.*;
+package victor.refactoring.fifteen;
 
 public class Play2Humongous {
 
@@ -16,10 +11,19 @@ public class Play2Humongous {
             System.out.println("More optional logic");
         }
         if (Integer.parseInt(a) == 1) {
-            System.out.println("With different return points");
+            System.out.println("Heavy Logic With many return points - TEST ME! " + a);
             return 1;
         }
         System.out.println("Yet more code");
         return 0;
     }
+
+    public void clientCode() {
+        System.out.println(humongousMethod("1",true));
+        System.out.println(humongousMethod("2",true));
+        System.out.println(humongousMethod("3",false));
+    }
 }
+
+
+// Done? Now think of a real-life deeply nested function. "BOSS-level" :)

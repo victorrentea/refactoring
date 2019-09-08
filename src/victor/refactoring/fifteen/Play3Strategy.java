@@ -1,9 +1,4 @@
-package fifteen;
-
-import fifteen.stuff.*;
-
-import java.time.DayOfWeek;
-import java.util.*;
+package victor.refactoring.fifteen;
 
 public class Play3Strategy {
 
@@ -20,7 +15,6 @@ public class Play3Strategy {
             return basePrice + 10;
         }
         throw new IllegalArgumentException(userCountry);
-
     }
 
 }

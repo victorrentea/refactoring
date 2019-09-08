@@ -1,4 +1,4 @@
-package fifteen.stuff;
+package victor.refactoring.fifteen.stuff;
 
 import java.util.ArrayList;
 import java.util.List;

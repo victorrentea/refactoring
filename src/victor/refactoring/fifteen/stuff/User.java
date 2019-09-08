@@ -1,4 +1,4 @@
-package fifteen.stuff;
+package victor.refactoring.fifteen.stuff;
 
 public class User {
     public String getName() {
