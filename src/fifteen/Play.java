@@ -14,6 +14,8 @@ public class Play {
     // TODO enlarge extraction
     // TODO early return (guards)
     // TODO distill switches
+    // TODO extract var+met then inline var
+
     public int computePrice(DayOfWeek day, boolean isPremiere) {
         int baseCost = 0;
         if (day != null) {
@@ -31,8 +33,6 @@ public class Play {
         System.out.println("More logic computing final cost using " + isPremiere);
         return baseCost * 2;
     }
-
-    // TODO extract var+met then inline var
     public void buyCoupleTicket() {
         System.out.println("Allocate ticket 1");
         System.out.println("Allocate ticket 2");
