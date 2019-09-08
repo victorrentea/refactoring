@@ -3,7 +3,7 @@ package victor.refactoring.fifteen;
 public class Play3Strategy {
 
     // TODO introduce Strategy Design Pattern
-    private int calculateComission(String userCountry, int basePrice) {
+    private int calculateCommission(String userCountry, int basePrice) {
         if ("US".equals(userCountry)) {
             System.out.println("Big Ugly Logic (50 lines)");
             return basePrice * 2 + 1;
