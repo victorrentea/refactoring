@@ -79,8 +79,8 @@ public class Play {
 
         System.out.println("Build and run the query: " + query + " with params: " + params);
     }
-    // TODO extract pure (mind the side effects)
 
+    // TODO extract pure (mind the side effects)
     public List<UserDto> getAllUsers() {
         List<User> allUsers = getFromRepository();
         List<UserDto> userDtos = new ArrayList<>();
@@ -93,7 +93,7 @@ public class Play {
         return userDtos;
     }
     private List<User> getFromRepository() {
-        return Arrays.asList(new User()); // fake
+        return Arrays.asList(new User()); // fake ;)
     }
 
     // TODO introduce Strategy Design Pattern
