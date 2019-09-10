@@ -24,13 +24,17 @@ class Implem2 /*implements IImplem */{
 abstract class Super {
     public void metodaDinBaza() {
         //chestii
-        pasLipsa();
+        writeHeader();
         //chestii
+        writeBody();
+        writeFooter();
         //chestii
         //chestii
     }
 
-    protected abstract void pasLipsa();
+    protected abstract void writeHeader();
+    protected abstract void writeBody();
+    protected abstract void writeFooter();
 }
 class A extends Super {
 
@@ -40,8 +44,7 @@ class A extends Super {
         implem.m(); // apelez impl 1
     }
 
-    @Override
-    protected void pasLipsa() {
+    protected void writeHeader() {
         // in felu A
     }
 }
@@ -52,8 +55,7 @@ class C extends Super {
         implem.m(); // apelez impl 1
     }
 
-    @Override
-    protected void pasLipsa() {
+    protected void writeHeader() {
         // in felu B
     }
 }
@@ -65,8 +67,7 @@ class B extends Super {
         implem.m(); // implem 2 !! TZEAPA !
     }
 
-    @Override
-    protected void pasLipsa() {
+    protected void writeHeader() {
         // in felu C
     }
 }
