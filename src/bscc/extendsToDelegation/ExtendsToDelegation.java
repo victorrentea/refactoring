@@ -7,18 +7,27 @@ public class ExtendsToDelegation {
 
 abstract class Super {
     protected void m() {
-        // logica Specifica @@!#@!#!$!@@#!
-    }
-    protected void n() {
-        // logica 2asdsa dsa dsa dsa
+        // implem1
     }
 }
 
 class A extends Super {
+    public void altaMetoda() {
+        m(); // apelez impl 1
+    }
+}
+class C extends Super {
+    public void altaMetoda() {
+        m(); // apelez impl 1
+    }
 }
 
 class B extends Super {
     public void altaMetoda() {
-        m();
+        m(); // implem 2 !! TZEAPA !
+    }
+    @Override
+    protected void m() {
+        // implem2
     }
 }
