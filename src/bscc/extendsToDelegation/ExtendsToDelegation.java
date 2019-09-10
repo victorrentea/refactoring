@@ -1,5 +1,7 @@
 package bscc.extendsToDelegation;
 
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
 public class ExtendsToDelegation {
 
 }
@@ -24,23 +26,49 @@ class Implem2 /*implements IImplem */{
 abstract class Super {
     public void metodaDinBaza() {
         //chestii
-        pasLipsa();
+        change();
         //chestii
         sendNotification("a");
         //chestii
         //chestii
     }
 
+    protected void siPasta() {
+        // lgoica
+    }
+    protected void siPasta2() {
+        // lgoica
+    }
+    protected void siPasta3() {
+        // lgoica
+    }
+    protected void siPasta4() {
+        // lgoica
+    }
+    protected void sieu() {
+        // lgoica
+    }
+    protected void siPasta6() {
+        // lgoica
+    }
+    protected void siPasta7() {
+        // lgoica
+    }
+    protected void siPasta9() {
+        // lgoica
+    }
 
-    protected abstract void pasLipsa();
+
+    protected void change() {
+        // default behavior
+        throw new NotImplementedException();
+    }
     protected void sendNotification(String a) {
         // nimic aici :/
     }
 }
 class A extends Super {
-
     private final Implem1 implem = new Implem1();
-
     public void altaMetoda() {
         implem.m(); // apelez impl 1
     }
@@ -49,9 +77,8 @@ class A extends Super {
     protected void sendNotification(String a) {
         //ceva inteligent // doar clasa A vrea sa faca ceva aici !!!
     }
-
     @Override
-    protected void pasLipsa() {
+    protected void change() {
         // in felu A
     }
 }
@@ -62,8 +89,7 @@ class C extends Super {
         implem.m(); // apelez impl 1
     }
 
-    @Override
-    protected void pasLipsa() {
+    protected void change() {
         // in felu B
     }
 }
@@ -75,8 +101,13 @@ class B extends Super {
         implem.m(); // implem 2 !! TZEAPA !
     }
 
-    @Override
-    protected void pasLipsa() {
+    protected void change() {
         // in felu C
+    }
+}
+class D extends Super {
+    public void simplu() {
+        change();
+
     }
 }
