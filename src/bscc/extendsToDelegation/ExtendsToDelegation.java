@@ -23,11 +23,14 @@ class Implem2 /*implements IImplem */{
 
 abstract class Super {
     public void metodaDinBaza() {
-        if (this instanceof A) {
-            A a = (A) this;
-
-        }
+        //chestii
+        pasLipsa();
+        //chestii
+        //chestii
+        //chestii
     }
+
+    protected abstract void pasLipsa();
 }
 class A extends Super {
 
@@ -36,12 +39,22 @@ class A extends Super {
     public void altaMetoda() {
         implem.m(); // apelez impl 1
     }
+
+    @Override
+    protected void pasLipsa() {
+        // in felu A
+    }
 }
 class C extends Super {
     private final Implem1 implem = new Implem1();
 
     public void altaMetoda() {
         implem.m(); // apelez impl 1
+    }
+
+    @Override
+    protected void pasLipsa() {
+        // in felu B
     }
 }
 
@@ -50,5 +63,10 @@ class B extends Super {
 
     public void altaMetoda() {
         implem.m(); // implem 2 !! TZEAPA !
+    }
+
+    @Override
+    protected void pasLipsa() {
+        // in felu C
     }
 }
