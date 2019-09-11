@@ -1,6 +1,5 @@
 package bscc.extendsToDelegation;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class ExtendsToDelegation {
 
@@ -61,7 +60,7 @@ abstract class Super {
 
     protected void change() {
         // default behavior
-        throw new NotImplementedException();
+        throw new RuntimeException("Not implemented");
     }
     protected void sendNotification(String a) {
         // nimic aici :/
@@ -109,5 +108,9 @@ class D extends Super {
     public void simplu() {
         change();
 
+        String jpql = """
+        SELECT s FROM Student
+        JOIN s.viata
+        """;
     }
 }
