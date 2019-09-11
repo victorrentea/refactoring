@@ -108,9 +108,9 @@ class D extends Super {
     public void simplu() {
         change();
 
-        String jpql = """
-        SELECT s FROM Student
-        JOIN s.viata
-        """;
+//        String jpql = """
+//        SELECT s FROM Student
+//        JOIN s.viata
+//        """;
     }
 }
