@@ -6,6 +6,7 @@ import java.time.DayOfWeek;
 import java.util.*;
 
 public class Play1 {
+    // TODO reorder + rename
     public void reorderParams() {
         String d = "D", a = "A", b = "B", c = "C";
         System.out.println("Heavy logic using params: " + a + b + c + d);
@@ -32,7 +33,7 @@ public class Play1 {
         return baseCost * 2;
     }
 
-    // TODO extract var+met then inline var
+    // TODO extract var; extract met; inline var
     public void buyCoupleTicket() {
         System.out.println("Allocate ticket 1");
         System.out.println("Allocate ticket 2");
@@ -48,7 +49,7 @@ public class Play1 {
             || order.getStatus() == Order.Status.PAYMENT_FAILED) {
             System.out.println("Logic to cancel order");
         } else {
-            throw new IllegalArgumentException("fifteen.stuff.Order cannot be cancelled!");
+            throw new IllegalArgumentException("Order cannot be cancelled!");
         }
     }
 

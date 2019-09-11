@@ -3,11 +3,12 @@ package victor.refactoring.fifteen;
 public class Play2Humongous {
 
     // TODO do yet one more thing before and after, every time. Z
+    // TODO efficient sins: add more optional logic inside "BOSS LEVEL"
     // TODO avoid boolean params
     // TODO extract'n'test + mock away
-    public int humongousMethod(String a, boolean boulean) {
+    public int humongousMethod(String a, boolean bullean) {
         System.out.println("Huge complex code A with " + a);
-        if (boulean) {
+        if (bullean) {
             System.out.println("More optional logic");
         }
         if (Integer.parseInt(a) == 1) {
@@ -17,13 +18,15 @@ public class Play2Humongous {
         System.out.println("Yet more code");
         return 0;
     }
+}
 
+class OtherClass {
+    private Play2Humongous play2 = new Play2Humongous(); // Fake @Autowired
     public void clientCode() {
-        System.out.println(humongousMethod("1",true));
-        System.out.println(humongousMethod("2",true));
-        System.out.println(humongousMethod("3",false));
+        System.out.println(play2.humongousMethod("1",true)); // UC 134
+        System.out.println(play2.humongousMethod("2",true)); // UC 673
+        System.out.println(play2.humongousMethod("3",true)); // UC 142
+        System.out.println(play2.humongousMethod("4",false)); // UC 12
     }
 }
 
-
-// Done? Now think of a real-life deeply nested function. "BOSS-level" :)
