@@ -1,20 +1,16 @@
 package victor.refactoring.fifteen.stuff;
 
+import victor.refactoring.fifteen.Interval;
+
 public class CarSearchCriteria {
-    private final int startYear;
-    private final int endYear;
+    private final Interval yearInterval;
 
-    public CarSearchCriteria(int startYear, int endYear) {
-        if (startYear > endYear) throw new IllegalArgumentException("start larger than end");
-        this.startYear = startYear;
-        this.endYear = endYear;
+
+    public CarSearchCriteria(Interval yearInterval) {
+        this.yearInterval = yearInterval;
     }
 
-    public int getStartYear() {
-        return startYear;
-    }
-
-    public int getEndYear() {
-        return endYear;
+    public Interval getYearInterval() {
+        return yearInterval;
     }
 }

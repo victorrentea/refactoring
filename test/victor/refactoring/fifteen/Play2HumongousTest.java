@@ -14,7 +14,12 @@ public class Play2HumongousTest {
     private Play2Humongous target;
     @Test
     public void test1() {
-        int result = target.humongousMethod("1", true);
+        int result;
+        if (true) {
+            result = target.bigForTrue("1");
+        } else {
+            result = target.bigForFalse("1");
+        }
         assertEquals(1, result);
     }
 

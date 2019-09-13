@@ -2,15 +2,18 @@ package victor.refactoring.fifteen;
 
 public class Play2Humongous {
 
-    // TODO do one more thing before and after, every time. Z
-    // TODO efficient sins: add more optional logic inside "BOSS LEVEL"
-    // TODO avoid boolean params
-    // TODO extract'n'test + mock away
-    public int humongousMethod(String a, boolean bullean) {
+    public int bigForTrue(String a) {
         System.out.println("Huge complex code A with " + a);
-        if (bullean) {
-            System.out.println("More optional logic");
+        System.out.println("More optional logic");
+        if (a != null) {
+            System.out.println("Heavy Logic With many return points - TEST ME! " + a);
+            return 1;
         }
+        System.out.println("Yet more code");
+        return 0;
+    }
+    public int bigForFalse(String a) {
+        System.out.println("Huge complex code A with " + a);
         if (a != null) {
             System.out.println("Heavy Logic With many return points - TEST ME! " + a);
             return 1;
@@ -23,10 +26,10 @@ public class Play2Humongous {
 class OtherClass {
     private Play2Humongous play2 = new Play2Humongous(); // Fake @Autowired
     public void clientCode() {
-        System.out.println(play2.humongousMethod("1",true)); // UC 134 = true
-        System.out.println(play2.humongousMethod("2",true)); // UC 673 = true
-        System.out.println(play2.humongousMethod("3",true)); // UC 142 = true
-        System.out.println(play2.humongousMethod("4",false)); // UC 12 = false
+        System.out.println(play2.bigForTrue("1")); // UC 134 = true
+        System.out.println(play2.bigForTrue("2")); // UC 673 = true
+        System.out.println(play2.bigForTrue("3")); // UC 142 = true
+        System.out.println(play2.bigForFalse("4")); // UC 12 = false
     }
 }
 
