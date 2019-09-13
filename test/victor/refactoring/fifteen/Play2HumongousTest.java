@@ -14,12 +14,7 @@ public class Play2HumongousTest {
     private Play2Humongous target;
     @Test
     public void test1() {
-        int result;
-        if (true) {
-            result = target.metPtTrue("1");
-        } else {
-            result = target.metPtFalse("1");
-        }
+        int result = target.humongousMethod("1", true);
         assertEquals(1, result);
     }
 
