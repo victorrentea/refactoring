@@ -9,6 +9,8 @@ enum Breed  {
     HASKEY,
     PECHINEZ
 }
+
+
 class Dog {
     Breed breed;
 

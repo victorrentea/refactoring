@@ -12,30 +12,9 @@ public class Switch {
 abstract class Dog {
 //    Breed breed;
 
-    public abstract void bark();/* {
-        switch (breed) {
-            case DOBERMAN:
-                System.out.println("Ham-HAM!"); break;
-            case HASKEY:
-                System.out.println("haAAA-haaaM!"); break;
-        }
-    }*/
-    public abstract void sleep();/* {
-        switch (breed) {
-            case DOBERMAN:
-                System.out.println("Sforrr"); break;
-            case HASKEY:
-                System.out.println("Sforrr"); break;
-        }
-    }*/
-    public abstract void bite();/* {
-        switch (breed) {
-            case DOBERMAN:
-                System.out.println("Auchj"); break;
-            case HASKEY:
-                System.out.println("Sforrr"); break;
-        }
-    }*/
+    public abstract void bark();
+    public abstract void sleep();
+    public abstract void bite();
 }
 
 class Doberman extends Dog {
