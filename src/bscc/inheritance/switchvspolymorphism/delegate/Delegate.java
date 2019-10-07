@@ -1,4 +1,4 @@
-package bscc.switchvspolymorphism.delegate;
+package bscc.inheritance.switchvspolymorphism.delegate;
 
 
 abstract class Dog {

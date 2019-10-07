@@ -1,4 +1,4 @@
-package bscc.superclassToDelegate.delegate;
+package bscc.inheritance.superclassToDelegate.delegate;
 
 import java.util.function.Function;
 

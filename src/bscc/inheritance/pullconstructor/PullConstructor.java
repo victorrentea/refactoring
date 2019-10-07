@@ -1,4 +1,4 @@
-package bscc.pullconstructor;
+package bscc.inheritance.pullconstructor;
 
 public class PullConstructor {
 

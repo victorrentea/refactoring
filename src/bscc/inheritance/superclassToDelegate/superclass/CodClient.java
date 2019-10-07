@@ -1,4 +1,4 @@
-package bscc.superclassToDelegate.superclass;
+package bscc.inheritance.superclassToDelegate.superclass;
 
 class Super {
     private String data;
