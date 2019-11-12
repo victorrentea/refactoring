@@ -1,4 +1,4 @@
-package bscc.switchvspolymorphism.switches;
+package bscc.inheritance.switchvspolymorphism.switches;
 
 public class Switch {
 }
@@ -9,6 +9,8 @@ enum Breed  {
     HASKEY,
     PECHINEZ
 }
+
+
 class Dog {
     Breed breed;
 

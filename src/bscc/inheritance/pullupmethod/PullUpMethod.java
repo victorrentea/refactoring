@@ -1,4 +1,4 @@
-package bscc.pullupmethod;
+package bscc.inheritance.pullupmethod;
 
 public class PullUpMethod {
 }

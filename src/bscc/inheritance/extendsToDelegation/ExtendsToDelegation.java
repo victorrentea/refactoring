@@ -1,4 +1,4 @@
-package bscc.extendsToDelegation;
+package bscc.inheritance.extendsToDelegation;
 
 
 public class ExtendsToDelegation {
