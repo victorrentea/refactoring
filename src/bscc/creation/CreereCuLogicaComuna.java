@@ -19,6 +19,9 @@ public class CreereCuLogicaComuna {
 
 class ShapeFactory {
     public Square createSquare(String mood) {
+        // biz logic
+        // apelui de servicii web
+        // LOGICA MASIVA
         return new Square(getColorByMood(mood), getBorderSize());
     }
 
