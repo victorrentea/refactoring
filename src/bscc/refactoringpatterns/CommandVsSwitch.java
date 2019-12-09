@@ -38,7 +38,7 @@ public class CommandVsSwitch {
 
         MessageType messageType = MessageType.valueOf(actionType);
 
-        applicationContext.getBean(messageType.commandClass).execute();
+//        applicationContext.getBean(messageType.commandClass).execute();
     }
 }
 interface Command {
