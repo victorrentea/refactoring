@@ -11,11 +11,33 @@ public class CreereCuLogicaComuna {
     }
 
     List<Shape> getShapes(String mood) {
-        return Arrays.asList(new Square(mood), new Circle(mood));
+        ShapeFactory factory = new ShapeFactory();
+        return Arrays.asList(factory.createSquare("HAPPY"), factory.createCircle("ANGRY"));
     }
 }
 
 
+class ShapeFactory {
+    public Square createSquare(String mood) {
+        return new Square(getColorByMood(mood), getBorderSize());
+    }
+
+    public Circle createCircle(String mood) {
+        return new Circle(getColorByMood(mood), getBorderSize());
+    }
+
+    private Color getColorByMood(String mood) {
+        switch (mood) {
+            case "HAPPY":return Color.YELLOW;
+            case "ANGRY":return Color.RED;
+            default: return Color.WHITE;
+        }
+    }
+
+    private int getBorderSize() {
+        return 10 + new Random().nextInt(10);
+    }
+}
 abstract class Shape {
     private final Color color;
     protected Shape(Color color) {
@@ -24,15 +46,17 @@ abstract class Shape {
 }
 class Square extends Shape{
     private final int edge;
-    Square(String mood) {
-        super("HAPPY".equals(mood) ? Color.YELLOW : Color.WHITE);
-        edge = 10 + new Random().nextInt(10);
+
+    public Square(Color color, int edge) {
+        super(color);
+        this.edge = edge;
     }
 }
 class Circle extends Shape{
     private final int radius;
-    Circle(String mood) {
-        super("HAPPY".equals(mood) ? Color.YELLOW : Color.WHITE);
-        radius = 10 + new Random().nextInt(10);
+
+    public Circle(Color color, int radius) {
+        super(color);
+        this.radius = radius;
     }
 }
