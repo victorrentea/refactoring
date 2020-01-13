@@ -1,0 +1,5 @@
+
+\squid:S2094"BRemove this empty class, write its code or make it an "interface".(ù³·ìûÿÿÿÿ
+Vsquid:S1118":Add a private constructor to hide the implicit public one.(÷“Ä‘ûÿÿÿÿ
+Ysquid:S1610"=Convert the abstract class "BaseCsvWriter" into an interface.(÷“Ä‘ûÿÿÿÿ
+?squid:S1172"(Remove this unused method parameter "s".(Õ…’×
