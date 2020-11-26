@@ -16,9 +16,9 @@ public class Play2HumongousTest {
     public void test1() {
         int result;
         if (true) {
-            result = target.bigForTrue("1");
+            result = target.humongousMethod("1", true);
         } else {
-            result = target.bigForFalse("1");
+            result = target.humongousMethod("1", false);
         }
         assertEquals(1, result);
     }
